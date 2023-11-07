@@ -1,0 +1,25 @@
+.button {
+  width: 30px;
+  height: auto;
+  padding: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 15px;
+  justify-content: space-around;
+}
+
+.buttonWrapper {
+  background-color: #601526;
+  display: flex;
+  width: 600px;
+  justify-content: center;
+}

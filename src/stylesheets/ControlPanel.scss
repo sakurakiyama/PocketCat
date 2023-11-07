@@ -1,0 +1,17 @@
+.controlWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconDefault {
+  display: flex;
+  width: 75px;
+}
+
+.iconSelected {
+  display: flex;
+  width: 125px;
+}

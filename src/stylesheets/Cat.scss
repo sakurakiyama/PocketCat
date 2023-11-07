@@ -1,0 +1,104 @@
+.catHatching {
+  background-image: url(../assets/cat/CatHatching.png);
+  background-repeat: no-repeat;
+  width: 306px;
+  height: 225px;
+  animation: hatching 4s steps(9);
+}
+
+@keyframes hatching {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -2750px;
+  }
+}
+
+.catPooping {
+}
+
+.catCelebrating {
+  background-image: url(../assets/cat/CatCelebrating.png);
+  background-repeat: no-repeat;
+  width: 271px;
+  height: 225px;
+  animation: celebrating 4s steps(4);
+}
+
+@keyframes celebrating {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1084px;
+  }
+}
+
+.catHungry {
+  background-image: url(../assets/cat/CatHungry.png);
+  background-repeat: no-repeat;
+  width: 308px;
+  height: 225px;
+  animation: hungry 4s steps(5) infinite;
+}
+
+@keyframes hungry {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1539px;
+  }
+}
+
+.catEating {
+  background-image: url(../assets/cat/CatEating.png);
+  background-repeat: no-repeat;
+  width: 306px;
+  height: 225px;
+  animation: eating 6s steps(13);
+}
+
+@keyframes eating {
+  to {
+    background-position: -3981px;
+  }
+}
+
+.catSleeping {
+}
+
+.catSad {
+  background-image: url(../assets/cat/CatSad.png);
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 225px;
+  animation: sad 4s steps(5) infinite;
+}
+@keyframes sad {
+  to {
+    background-position: -1539px;
+  }
+}
+
+.catIdle {
+  background-image: url(../assets/cat/CatIdle.png);
+  background-repeat: no-repeat;
+  width: 308px;
+  height: 225px;
+  animation: idle 2s steps(3) infinite;
+}
+
+@keyframes idle {
+  to {
+    background-position: -922px;
+  }
+}
+
+.catDied {
+  background-image: url(../assets/cat/Tombstone.png);
+  background-repeat: no-repeat;
+  width: 308px;
+  height: 225px;
+}

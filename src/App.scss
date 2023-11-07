@@ -1,0 +1,26 @@
+.gameWrapper {
+  background-image: url(./assets/background/Tatami.png);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px 2px 0 0;
+  height: 500px;
+  width: 600px;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+}
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 10vw 0;
+}
+
+@media screen and (max-width: 599px) {
+  .frame {
+    height: 250px;
+    width: 300px;
+  }
+}
