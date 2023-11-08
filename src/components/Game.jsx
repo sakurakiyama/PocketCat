@@ -60,6 +60,7 @@ function Game({ setGameStarted, action, setAction, setGameOver }) {
     }, 4000);
   }
 
+  function goToSleep() {}
   useEffect(() => {
     let timeout = setTimeout(() => {
       setClock(clock + 1);
@@ -67,7 +68,7 @@ function Game({ setGameStarted, action, setAction, setGameOver }) {
       if (status === 'Hatching') {
         setTimeout(() => setStatus('Idling'), 1000);
       }
-      if (status === 'Idling') {
+      if (status === 'Idling' || status === 'Sleeping') {
         if (clock === hungerTime) {
           setStatus('Hungry');
           setDieTime(getNextDieTime(clock));
@@ -85,6 +86,9 @@ function Game({ setGameStarted, action, setAction, setGameOver }) {
         setStatus('Dead');
         setGameStarted(false);
         setGameOver(true);
+      }
+      if (clock === sleepTime) {
+        setStatus('Sleeping');
       }
 
       if (action === 'feed' && status === 'Hungry') {

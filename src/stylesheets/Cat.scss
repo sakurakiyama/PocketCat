@@ -98,6 +98,17 @@
 }
 
 .catSleeping {
+  background-image: url(../assets/cat/CatSleeping.png);
+  background-repeat: no-repeat;
+  width: 308px;
+  height: 225px;
+  animation: sleeping 4s steps(3) infinite;
+}
+
+@keyframes sleeping {
+  to {
+    background-position: -925px;
+  }
 }
 
 .catSad {
@@ -107,6 +118,7 @@
   height: 225px;
   animation: sad 4s steps(5) infinite;
 }
+
 @keyframes sad {
   to {
     background-position: -1539px;
