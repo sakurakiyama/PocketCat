@@ -16,6 +16,10 @@ Pocket Cat is a web game that combines the nostalgia of the 90s, the simplicity 
 
 The animations in this game are crafted through the utilization of CSS spritesheets. This technique allows for a smooth and visually engaging gaming experience, where various actions and movements of characters like Jameson come to life on the screen. By condensing multiple animation frames into a single image, spritesheets make the game visually dynamic and efficient. The images in this app were generated using <a href='https://www.piskelapp.com/'>Piskel</a>.
 
+## Play
+
+You can play the deployed version of the game <a href='https://pocketcat.netlify.app/'>here</a>.
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
