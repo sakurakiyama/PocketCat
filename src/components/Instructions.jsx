@@ -11,7 +11,8 @@ function Instructions({ setOpenModal }) {
       <div className='modalContainer'>
         <div className='modalContents'>
           Please use the icons to choose your actions: feed, give attention or
-          clean. To begin the game, press the play button!
+          clean. To begin the game, click anywhere outside of the modal and
+          press the play button!
         </div>
       </div>
     </div>

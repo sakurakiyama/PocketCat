@@ -8,27 +8,48 @@
   justify-content: space-around;
   align-items: center;
   background-size: cover;
+  border: solid;
+  border-width: 15px 15px 0 15px;
 }
 
 .appWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  margin: 10vw 0;
 }
 
 .gameOver {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
+  height: 250px;
   width: auto;
+  border-radius: 5px;
 }
 
-@media screen and (max-width: 599px) {
-  .frame {
-    height: 250px;
-    width: 300px;
-  }
+.gameName {
+  background-color: black;
+  color: white;
+  width: 600px;
+  border: solid black;
+  border-width: 0 15px 0 15px;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  padding-bottom: 10px;
 }
+.gameBoyBackground {
+  background-color: #d09411;
+  position: absolute;
+  width: 700px;
+  height: 900px;
+  z-index: -100;
+  transform: translateY(-50px);
+  border-radius: 20px;
+}
+
+// @media screen and (max-width: 599px) {
+//   .frame {
+//     height: 250px;
+//     width: 300px;
+//   }
+// }

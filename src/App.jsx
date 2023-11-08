@@ -21,6 +21,7 @@ function App() {
 
   return (
     <div className='appWrapper'>
+      <div className='gameBoyBackground'></div>
       <div className='gameWrapper'>
         {openModal && <Instructions setOpenModal={setOpenModal} />}
         {!gameOver && gameStarted && <ControlPanel move={move} />}
@@ -47,6 +48,7 @@ function App() {
         setAction={setAction}
         setGameOver={setGameOver}
       />
+      <div className='gameName'>POCKET JAMESON ©</div>
     </div>
   );
 }

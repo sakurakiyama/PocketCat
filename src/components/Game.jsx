@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import {
   TICK_RATE,
@@ -9,7 +10,7 @@ import {
 } from '../constants';
 import Cat from '../components/Cat';
 
-function Game({ setGameStarted, action, setAction, gameOver, setGameOver }) {
+function Game({ setGameStarted, action, setAction, setGameOver }) {
   const [status, setStatus] = useState('Hatching');
   const [clock, setClock] = useState(1);
   const [hungerTime, setHungerTime] = useState(getNextHungerTime(clock));
