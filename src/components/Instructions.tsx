@@ -1,7 +1,9 @@
-/* eslint-disable react/prop-types */
 import '../stylesheets/Instructions.scss';
 
-function Instructions({ setOpenModal }) {
+interface InstructionsProps {
+  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+function Instructions({ setOpenModal }: InstructionsProps) {
   function handleClose() {
     setOpenModal(false);
   }

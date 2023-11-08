@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import {
   TICK_RATE,
@@ -8,16 +7,30 @@ import {
   getNextSleepTime,
   getNextAttentionTime,
 } from '../constants';
-import Cat from '../components/Cat';
+import Cat from './Cat';
 
-function Game({ setGameStarted, action, setAction, setGameOver }) {
-  const [status, setStatus] = useState('Hatching');
-  const [clock, setClock] = useState(1);
-  const [hungerTime, setHungerTime] = useState(getNextHungerTime(clock));
-  const [poopTime, setPoopTime] = useState(undefined);
-  const [dieTime, setDieTime] = useState(undefined);
-  const [sleepTime, setSleepTime] = useState(getNextSleepTime(clock));
-  const [attentionTime, setAttentionTime] = useState(
+interface GameProps {
+  setGameStarted: React.Dispatch<React.SetStateAction<boolean>>;
+  action: string | null;
+  setAction: React.Dispatch<React.SetStateAction<string | null>>;
+  setGameOver: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Game({
+  setGameStarted,
+  action,
+  setAction,
+  setGameOver,
+}: GameProps): JSX.Element {
+  const [status, setStatus] = useState<string>('Hatching');
+  const [clock, setClock] = useState<number>(1);
+  const [hungerTime, setHungerTime] = useState<number>(
+    getNextHungerTime(clock)
+  );
+  const [poopTime, setPoopTime] = useState<null | number>(null);
+  const [dieTime, setDieTime] = useState<null | number>(null);
+  const [sleepTime, setSleepTime] = useState<number>(getNextSleepTime(clock));
+  const [attentionTime, setAttentionTime] = useState<number>(
     getNextAttentionTime(clock)
   );
 
@@ -60,7 +73,6 @@ function Game({ setGameStarted, action, setAction, setGameOver }) {
     }, 4000);
   }
 
-  function goToSleep() {}
   useEffect(() => {
     let timeout = setTimeout(() => {
       setClock(clock + 1);
@@ -90,7 +102,6 @@ function Game({ setGameStarted, action, setAction, setGameOver }) {
       if (clock === sleepTime) {
         setStatus('Sleeping');
       }
-
       if (action === 'feed' && status === 'Hungry') {
         feedCat();
       }
@@ -106,8 +117,6 @@ function Game({ setGameStarted, action, setAction, setGameOver }) {
       clearTimeout(timeout);
     };
   }, [clock]);
-
-  console.log(status);
 
   return (
     <div>

@@ -1,10 +1,12 @@
-/* eslint-disable react/prop-types */
 import Fish from '../assets/icons/Fish.png';
 import Heart from '../assets/icons/Heart.png';
 import Litter from '../assets/icons/Litter.png';
 import '../stylesheets/ControlPanel.scss';
 
-function ControlPanel({ move }) {
+interface ControlPanelProps {
+  move: number;
+}
+function ControlPanel({ move }: ControlPanelProps): JSX.Element {
   return (
     <div className='controlWrapper'>
       <img

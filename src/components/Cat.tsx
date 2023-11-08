@@ -1,9 +1,12 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import '../stylesheets/Cat.scss';
 
-function Cat({ status }) {
-  const [catClass, setCatClass] = useState(undefined);
+interface CatProps {
+  status: string;
+}
+
+function Cat({ status }: CatProps): JSX.Element {
+  const [catClass, setCatClass] = useState<undefined | string>(undefined);
   useEffect(() => {
     switch (status) {
       case 'Hatching':

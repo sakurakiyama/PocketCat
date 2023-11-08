@@ -1,11 +1,18 @@
-/* eslint-disable react/prop-types */
 import { PlayCircleIcon } from '@heroicons/react/24/solid';
 import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { ICONS } from '../constants';
-
 import '../stylesheets/Buttons.scss';
+
+interface ButtonProps {
+  gameStarted: boolean;
+  setGameStarted: React.Dispatch<React.SetStateAction<boolean>>;
+  move: number;
+  setMove: React.Dispatch<React.SetStateAction<number>>;
+  setAction: React.Dispatch<React.SetStateAction<string | null>>;
+  setGameOver: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 function Buttons({
   gameStarted,
@@ -14,8 +21,8 @@ function Buttons({
   setMove,
   setAction,
   setGameOver,
-}) {
-  function handleClick(id) {
+}: ButtonProps): JSX.Element {
+  function handleClick(id: string) {
     if (id === 'left') {
       setMove((prevState) => {
         return (2 + prevState) % ICONS.length;

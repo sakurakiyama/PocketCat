@@ -7,11 +7,11 @@ import GameOver from './assets/GameOver.png';
 import Instructions from './components/Instructions';
 
 function App() {
-  const [gameStarted, setGameStarted] = useState(false);
-  const [move, setMove] = useState(0);
-  const [action, setAction] = useState(null);
-  const [gameOver, setGameOver] = useState(false);
-  const [openModal, setOpenModal] = useState(true);
+  const [gameStarted, setGameStarted] = useState<boolean>(false);
+  const [move, setMove] = useState<number>(0);
+  const [action, setAction] = useState<null | string>(null);
+  const [gameOver, setGameOver] = useState<boolean>(false);
+  const [openModal, setOpenModal] = useState<boolean>(true);
 
   useEffect(() => {
     if (gameOver) {
@@ -30,7 +30,6 @@ function App() {
             setGameStarted={setGameStarted}
             action={action}
             setAction={setAction}
-            gameOver={gameOver}
             setGameOver={setGameOver}
           />
         )}
