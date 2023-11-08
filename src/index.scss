@@ -15,4 +15,14 @@ body {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  background: url('./assets/background/Stars.png');
+  background-repeat: repeat;
+  background-size: 300px;
+  animation: twinkle 4s steps(2) infinite;
+}
+
+@keyframes twinkle {
+  to {
+    background-position: -300px;
+  }
 }
