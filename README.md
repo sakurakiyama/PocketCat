@@ -2,7 +2,7 @@
 
 ## Pocket Cat
 
-Pocket Cat is a web game that combines the nostalgia of the 90's; the simplcity of Tamagotchu and the retro charm of Gameboy. Your virtual cat, Jameson (inspired by my cat), hatches and you'll need to take care of him by feeding him, giving him attention and cleaning up after him.
+Pocket Cat is a web game that combines the nostalgia of the 90s, the simplicity of Tamagotchi, and the retro charm of Gameboy. Your virtual cat, Jameson (inspired by my cat), hatches, and you'll need to take care of him by feeding him, giving him attention, and cleaning up after him.
 
 ## Tech Stack
 
