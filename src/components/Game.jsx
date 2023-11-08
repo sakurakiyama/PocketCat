@@ -82,6 +82,8 @@ function Game({ setGameStarted, action, setAction, gameOver, setGameOver }) {
       }
       if (clock === dieTime) {
         setStatus('Dead');
+        setGameStarted(false);
+        setGameOver(true);
       }
 
       if (action === 'feed' && status === 'Hungry') {

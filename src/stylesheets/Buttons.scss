@@ -9,6 +9,9 @@
   color: white;
 }
 
+.button:hover {
+  color: #ae6563;
+}
 .buttons {
   display: flex;
   flex-direction: row;
@@ -22,4 +25,5 @@
   display: flex;
   width: 600px;
   justify-content: center;
+  border-radius: 0 0 5px 5px;
 }

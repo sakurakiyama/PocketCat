@@ -3,11 +3,15 @@ import { useState, useEffect } from 'react';
 import Game from './components/Game';
 import ControlPanel from './components/ControlPanel';
 import Buttons from './components/Buttons';
+import GameOver from './assets/GameOver.png';
+import Instructions from './components/Instructions';
+
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [move, setMove] = useState(0);
   const [action, setAction] = useState(null);
   const [gameOver, setGameOver] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
 
   useEffect(() => {
     if (gameOver) {
@@ -18,6 +22,7 @@ function App() {
   return (
     <div className='appWrapper'>
       <div className='gameWrapper'>
+        {openModal && <Instructions setOpenModal={setOpenModal} />}
         {!gameOver && gameStarted && <ControlPanel move={move} />}
         {gameStarted && (
           <Game
@@ -27,6 +32,11 @@ function App() {
             gameOver={gameOver}
             setGameOver={setGameOver}
           />
+        )}
+        {gameOver && (
+          <div>
+            <img className='gameOver' src={GameOver}></img>
+          </div>
         )}
       </div>
       <Buttons
