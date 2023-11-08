@@ -16,12 +16,43 @@
 }
 
 .catPooping {
+  background-image: url(../assets/cat/CatPoopingTest.png);
+  background-repeat: no-repeat;
+  width: 310px;
+  height: 225px;
+  animation: pooping 4s steps(6) infinite;
+}
+
+@keyframes pooping {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1861px;
+  }
+}
+
+.catClean {
+  background-image: url(../assets/cat/CatCleanTest.png);
+  background-repeat: no-repeat;
+  width: 308px;
+  height: 225px;
+  animation: clean 4s steps(5);
+}
+
+@keyframes clean {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1542px;
+  }
 }
 
 .catCelebrating {
   background-image: url(../assets/cat/CatCelebrating.png);
   background-repeat: no-repeat;
-  width: 271px;
+  width: 309px;
   height: 225px;
   animation: celebrating 4s steps(4);
 }
@@ -31,7 +62,7 @@
     background-position: 0;
   }
   to {
-    background-position: -1084px;
+    background-position: -1235px;
   }
 }
 

@@ -33,7 +33,18 @@ function Game({ setGameStarted, action, setAction, gameOver, setGameOver }) {
     }, 6000);
   }
 
-  function cleanPoop() {}
+  function cleanPoop() {
+    setAction(null);
+    setDieTime(null);
+    setStatus('Cleaned');
+    setAttentionTime(getNextAttentionTime(clock));
+    setHungerTime(getNextHungerTime(clock));
+    setPoopTime(getNextPoopTime(clock));
+    setSleepTime(getNextSleepTime(clock));
+    setTimeout(() => {
+      setStatus('Idling');
+    }, 4000);
+  }
 
   function giveLove() {
     setAction(null);
@@ -64,10 +75,15 @@ function Game({ setGameStarted, action, setAction, gameOver, setGameOver }) {
           setStatus('Attention');
           setDieTime(getNextDieTime(clock));
         }
+        if (clock === poopTime) {
+          setStatus('Pooping');
+          setDieTime(getNextDieTime(clock));
+        }
       }
       if (clock === dieTime) {
         setStatus('Dead');
       }
+
       if (action === 'feed' && status === 'Hungry') {
         feedCat();
       }

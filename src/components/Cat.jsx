@@ -24,12 +24,13 @@ function Cat({ status }) {
         return setCatClass('catDied');
       case 'Attention':
         return setCatClass('catSad');
+      case 'Cleaned':
+        return setCatClass('catClean');
       default:
         return setCatClass('catIdle');
     }
   }, [status]);
 
-  console.log(status);
   return (
     <div>
       <div className={catClass}></div>
